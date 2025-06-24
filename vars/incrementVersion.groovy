@@ -1,6 +1,6 @@
 #! /usr/bin/env groovy
 
-def call() {
+def call(String UPDATED_VERSION) {
     echo 'incrementing app version'
     // change directory
     dir('app') {
