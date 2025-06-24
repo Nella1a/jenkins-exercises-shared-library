@@ -1,6 +1,6 @@
 #! /usr/bin/env groovy
 
-def call() {
+def call(String UPDATED_VERSION) {
     echo "building the docker image"
     withCredentials([usernamePassword(credentialsId: 'docker-hub-cred', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
         sh "docker build -t kanjamn/demo-app:jenkinsexercises-${UPDATED_VERSION} ."
